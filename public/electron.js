@@ -8,8 +8,8 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+    },
   });
 
   // load the index.html of the app
@@ -20,7 +20,7 @@ const createWindow = () => {
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "../build/index.html")}`
   );
-}
+};
 
 // call createWindow after electron ready
 app.whenReady().then(createWindow);
